@@ -1,0 +1,35 @@
+Title: Customer Churn Prediction – Problem Framing
+
+Objective:
+The aim of this project is to predict which customers are likely to discontinue their subscription within the next 30 days. Early identification allows the company to take proactive steps such as offering discounts, personalized support, or loyalty rewards.
+
+Decision Context:
+Currently, the retention team relies on manual reviews of usage reports and intuition. This process is inconsistent, inefficient, and often misses customers who are silently disengaging. A machine learning model can provide a structured, data-driven approach to prioritize outreach and reduce wasted effort.
+
+Prediction Target:
+Binary variable – churned = 1 if the customer leaves, 0 otherwise.
+
+Unit of Observation:
+Each row in the dataset represents one customer record.
+
+Action Window:
+Prediction horizon = 30 days ahead.
+
+Non‑ML Baseline:
+Without ML, the company uses manual analysis and random follow-ups, leading to missed opportunities and wasted effort. The baseline accuracy using majority class (non-churn) is around 67%.
+
+Metrics:
+Business metric – Retention rate ↑ and churn rate ↓.  
+Model metric – F1-score and AUC for balanced evaluation.
+
+Costs:
+False Positive – Contacting satisfied customers unnecessarily, which wastes time and resources.  
+False Negative – Missing customers who actually churn, resulting in lost revenue and reduced trust.
+
+Safety and Fallback:
+If model confidence < 0.6, predictions are flagged for human review.  
+Monthly monitoring will detect drift; rollback to manual process if drift > 10%.  
+Ethical safeguards include fairness checks to ensure no plan type or demographic is unfairly penalized.
+
+Expected Outcome:
+A baseline model that helps the retention team focus on high-risk customers, improving efficiency and customer satisfaction. Over time, this framework can be extended to larger datasets and more advanced models.

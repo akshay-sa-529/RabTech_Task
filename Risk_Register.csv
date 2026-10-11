@@ -1,0 +1,14 @@
+Risk Register – Customer Churn Prediction
+
+| Risk | Impact | Likelihood | Mitigation |
+|------|---------|-------------|-------------|
+| Regional data bias | Medium | Medium | Re-sample or weight by region |
+| Privacy leak via personal info | High | Low | Remove identifiers before training |
+| Model drift over time | Medium | Medium | Monthly re-evaluation |
+| Overfitting on small data | High | High | Use cross-validation and regularization |
+| Misuse for real business decisions | High | Low | Restrict use to educational purposes |
+| Incomplete documentation | Medium | Medium | Maintain version-controlled data card and notebook |
+| Ethical bias in feature selection | High | Medium | Conduct fairness audit before deployment |
+| Small dataset size | High | High | Collect more data before production use |
+| Imbalanced churn distribution | Medium | Medium | Apply SMOTE or class weighting |
+| Lack of explainability | Medium | Medium | Use SHAP/LIME for feature importance |
