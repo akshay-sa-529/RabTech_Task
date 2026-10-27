@@ -1,1 +1,1 @@
-Tasks of AIML RabTech Internship 
+Tasks of RabTech Internship 
